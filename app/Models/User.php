@@ -26,7 +26,6 @@ class User extends Authenticatable
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var list<string>
      */
     protected $hidden = [
         'password',
@@ -44,5 +43,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function scopeActive($quyery)
+    {
+        
     }
 }
